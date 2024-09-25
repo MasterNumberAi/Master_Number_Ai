@@ -25,8 +25,11 @@
     "react-dom": "^18.0.0",
     "react-scripts": "5.0.1"
   },
-  "devDependencies": {
-    "eslint": "^7.32.0"
-  },
-  "homepage": "https://masternumberai.netlify.app"
+"dependencies": {
+  "@solana/wallet-adapter-react": "^0.10.1", // Downgraded for compatibility
+  "@solana/wallet-adapter-wallets": "^0.10.1",
+  "@solana/wallet-adapter-react-ui": "^0.10.1", // Adjusted to match other versions
+  "react": "^18.0.0",
+  "react-dom": "^18.0.0",
+  "react-scripts": "5.0.1"
 }
