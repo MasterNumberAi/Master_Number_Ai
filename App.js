@@ -1,5 +1,6 @@
 import React from 'react';
-import WalletConnection from './wallet';
+import WalletConnection from './src/wallet'; // Adjust the path based on its location
+import './src/styles.css'; // Adjust the path to your styles.css
 
 function App() {
     return (
@@ -12,7 +13,7 @@ function App() {
                     <li>Fomo Frog Coin</li>
                     <li>Master Number Coin</li>
                 </ul>
-                <h3>Connect Phantom Wallet</h3>
+                <button>Connect Phantom Wallet</button>
             </div>
         </WalletConnection>
     );
