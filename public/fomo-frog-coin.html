@@ -8,6 +8,34 @@
 <body>
     <h1>Fomo Frog Coin</h1>
     <p>Welcome to the official page for Fomo Frog Coin. Stay tuned for more information about the coin and how to buy it!</p>
+
+    <button id="connectWallet">Connect Phantom Wallet</button>
+    <p id="walletAddress"></p>
+
+    <div id="transactionSection">
+        <h2>Buy Fomo Frog Coin</h2>
+        <p>This is where you'll be able to purchase Fomo Frog Coin.</p>
+        <!-- Future transaction functionality will go here -->
+    </div>
+
     <a href="index.html">Back to Home</a>
+
+    <script>
+        const connectButton = document.getElementById('connectWallet');
+        const walletAddress = document.getElementById('walletAddress');
+
+        connectButton.addEventListener('click', async () => {
+            if (window.solana && window.solana.isPhantom) {
+                try {
+                    const resp = await window.solana.connect();
+                    walletAddress.innerText = `Connected wallet: ${resp.publicKey.toString()}`;
+                } catch (err) {
+                    console.log('Error:', err);
+                }
+            } else {
+                alert('Please install the Phantom Wallet extension.');
+            }
+        });
+    </script>
 </body>
 </html>
