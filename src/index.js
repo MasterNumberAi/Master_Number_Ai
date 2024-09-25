@@ -1,20 +1,13 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
-import App from './App';
-import { WalletProvider } from '@solana/wallet-adapter-react';
-import { PhantomWalletAdapter } from '@solana/wallet-adapter-wallets';
-import { ConnectionProvider } from '@solana/wallet-adapter-react';
-import { clusterApiUrl } from '@solana/web3.js';
 
-const network = 'mainnet-beta';
-const endpoint = clusterApiUrl(network);
-const wallets = [new PhantomWalletAdapter()];
+const ProjectDetails = () => {
+    return (
+        <div className="project-details">
+            <h3>Project Details</h3>
+            <p>Fomo Frog Coin was intended as a meme coin but has grown into a community builder.</p>
+            <p>Master Number Coin aims to connect with top accounting firms to tap into global markets.</p>
+        </div>
+    );
+};
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-    <ConnectionProvider endpoint={endpoint}>
-        <WalletProvider wallets={wallets} autoConnect>
-            <App />
-        </WalletProvider>
-    </ConnectionProvider>
-);
+export default ProjectDetails;
