@@ -1,8 +1,11 @@
 import React from 'react';
+import { useWallet } from '@solana/wallet-adapter-react';
 import WalletConnection from './wallet';
 import { WalletMultiButton } from '@solana/wallet-adapter-react-ui';
 
 function App() {
+    const { publicKey } = useWallet();
+
     return (
         <WalletConnection>
             <div style={{ textAlign: 'center', padding: '20px' }}>
@@ -14,7 +17,7 @@ function App() {
                     <li><a href="#">Master Number Coin</a></li>
                 </ul>
                 <WalletMultiButton />
-                <p>Connected wallet: <span id="wallet-address">Not connected</span></p>
+                <p>Connected wallet: {publicKey ? publicKey.toString() : 'Not connected'}</p>
             </div>
         </WalletConnection>
     );
