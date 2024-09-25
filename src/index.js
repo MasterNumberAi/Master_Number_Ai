@@ -1,13 +1,10 @@
 import React from 'react';
+import ReactDOM from 'react-dom/client';
+import App from './App';
 
-const ProjectDetails = () => {
-    return (
-        <div className="project-details">
-            <h3>Project Details</h3>
-            <p>Fomo Frog Coin was intended as a meme coin but has grown into a community builder.</p>
-            <p>Master Number Coin aims to connect with top accounting firms to tap into global markets.</p>
-        </div>
-    );
-};
-
-export default ProjectDetails;
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
+    <React.StrictMode>
+        <App />
+    </React.StrictMode>
+);
