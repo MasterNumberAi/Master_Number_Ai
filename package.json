@@ -19,8 +19,8 @@
   "license": "MIT",
   "dependencies": {
     "@solana/wallet-adapter-react": "^0.12.0",
-    "@solana/wallet-adapter-wallets": "^0.10.1",  // Adjusted version
-    "@solana/wallet-adapter-react-ui": "^0.12.0", // Added this line
+    "@solana/wallet-adapter-wallets": "^0.10.1",
+    "@solana/wallet-adapter-react-ui": "^0.12.0",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
     "react-scripts": "5.0.1"
