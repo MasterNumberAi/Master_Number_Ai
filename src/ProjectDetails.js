@@ -2,28 +2,18 @@ import React from 'react';
 
 const ProjectDetails = () => {
     return (
-        <div className="project-details">
-            <h2>About Master Number AI</h2>
-            <p>
-                Master Number AI is a pioneering brand leading the charge in merging technology with finance and cryptocurrency. We are launching revolutionary projects, starting with Fomo Frog Coin and Master Number Coin, designed to bridge the gap between the crypto space and real-world applications.
-            </p>
+        <div>
+            <h2>Project Details</h2>
             <h3>Fomo Frog Coin</h3>
-            <p>
-                Originally intended as a meme coin, Fomo Frog Coin has evolved into a community-building powerhouse. Under the guidance of its founder, King Arthur, it connects diverse communities, including the Billionaire NFTs, boasting over 80,000 unique NFT holders across 62 countries.
-            </p>
+            <p>Originally a meme coin, Fomo Frog Coin has transformed into a community-building powerhouse, connecting old communities like Billionaire NFTs.</p>
+            <p>Led by King Arthur, who has taken Billionaire NFTs to over 62 countries with 80k unique NFT holders.</p>
+
             <h3>Master Number Coin</h3>
-            <p>
-                Master Number Coin aims to represent the top 50 accounting and bookkeeping firms globally. By leveraging AI and automation, we unlock access to global markets, enhancing financial processes and driving significant value.
-            </p>
-            <h2>Roadmap</h2>
-            <ul>
-                <li><strong>Milestone 1:</strong> Launch Fomo Frog Coin and build the community.</li>
-                <li><strong>Milestone 2:</strong> Establish partnerships with leading accounting firms.</li>
-                <li><strong>Milestone 3:</strong> Develop a robust platform for trading and transactions.</li>
-                <li><strong>Milestone 4:</strong> Expand marketing efforts to reach a wider audience.</li>
-                <li><strong>Milestone 5:</strong> Introduce AI-driven financial solutions for users.</li>
-                {/* Add more milestones as needed */}
-            </ul>
+            <p>This coin represents the top 50 accounting and bookkeeping firms worldwide, unlocking access to global markets through our AI and tech automation.</p>
+            <p>Our goal is to blend the crypto space with real-world applications, ensuring a legendary experience for all participants.</p>
+
+            <h3>Roadmap</h3>
+            <p>We are committed to building our project in 10x milestones, with a clear understanding of each step to achieve our vision.</p>
         </div>
     );
 };
