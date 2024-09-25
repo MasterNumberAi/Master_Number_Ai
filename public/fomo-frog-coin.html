@@ -4,38 +4,49 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fomo Frog Coin</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Fomo Frog Coin</h1>
-    <p>Welcome to the official page for Fomo Frog Coin. Stay tuned for more information about the coin and how to buy it!</p>
+    <header>
+        <h1>Fomo Frog Coin</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="master-number-coin.html">Master Number Coin</a></li>
+                <li><a href="#roadmap">Roadmap</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <button id="connectWallet">Connect Phantom Wallet</button>
-    <p id="walletAddress"></p>
+    <section id="about-frog">
+        <h2>About Fomo Frog Coin</h2>
+        <p>Fomo Frog Coin ($FROG) is a fun and engaging token designed to bring community members together through unique rewards and benefits. It’s built on the Solana blockchain and provides early adopters with access to a reward pool that grows as the community expands.</p>
+    </section>
 
-    <div id="transactionSection">
-        <h2>Buy Fomo Frog Coin</h2>
-        <p>This is where you'll be able to purchase Fomo Frog Coin.</p>
-        <!-- Future transaction functionality will go here -->
-    </div>
+    <section id="features-frog">
+        <h2>Features of Fomo Frog Coin</h2>
+        <ul>
+            <li>Rewards for early adopters and loyal holders</li>
+            <li>Exclusive airdrops for the first buyers</li>
+            <li>Access to a special NFT marketplace</li>
+            <li>Collaborations with meme projects to increase value</li>
+        </ul>
+    </section>
 
-    <a href="index.html">Back to Home</a>
+    <section id="roadmap-frog">
+        <h2>Fomo Frog Coin Roadmap</h2>
+        <ul>
+            <li><strong>Q1 2024:</strong> Early adopter campaign and Fomo Frog Coin launch</li>
+            <li><strong>Q2 2024:</strong> Reward pool distribution and special airdrops for holders</li>
+            <li><strong>Q3 2024:</strong> NFT marketplace integration for Fomo Frog Coin holders</li>
+        </ul>
+    </section>
 
-    <script>
-        const connectButton = document.getElementById('connectWallet');
-        const walletAddress = document.getElementById('walletAddress');
-
-        connectButton.addEventListener('click', async () => {
-            if (window.solana && window.solana.isPhantom) {
-                try {
-                    const resp = await window.solana.connect();
-                    walletAddress.innerText = `Connected wallet: ${resp.publicKey.toString()}`;
-                } catch (err) {
-                    console.log('Error:', err);
-                }
-            } else {
-                alert('Please install the Phantom Wallet extension.');
-            }
-        });
-    </script>
+    <footer id="contact">
+        <h2>Contact Us</h2>
+        <p>Email: info@masternumberai.com</p>
+        <p>Telegram: <a href="https://t.me/FOMO_Frog_Announcements">FOMO Frog Announcements</a></p>
+    </footer>
 </body>
 </html>
