@@ -1,0 +1,8 @@
+{
+  "name": "master_number_ai",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "echo 'This is where your build script will go'"
+  },
+  "dependencies": {}
+}
