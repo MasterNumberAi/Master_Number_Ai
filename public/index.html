@@ -4,53 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Master Number AI</title>
+    <link rel="stylesheet" href="%PUBLIC_URL%/styles.css">
 </head>
 <body>
-    <h1>Welcome to Master Number AI</h1>
-    <p>This is the beginning of something amazing. Stay tuned for updates on Fomo Frog Coin, Master Number Coin, and much more!</p>
-
-    <h2>Explore our Projects:</h2>
-    <ul>
-        <li><a href="fomo-frog-coin.html">Fomo Frog Coin</a></li>
-        <li><a href="master-number-coin.html">Master Number Coin</a></li>
-    </ul>
-
-    <button id="connectWallet">Connect Phantom Wallet</button>
-    <p id="walletAddress"></p>
-
-    <script>
-        // Function to check if the Phantom wallet is installed
-        const isPhantomInstalled = () => {
-            return window.solana && window.solana.isPhantom;
-        };
-
-        const connectButton = document.getElementById('connectWallet');
-        const walletAddress = document.getElementById('walletAddress');
-
-        // Check if Phantom wallet is installed
-        if (isPhantomInstalled()) {
-            connectButton.innerText = 'Connect Phantom Wallet';
-        } else {
-            connectButton.innerText = 'Install Phantom Wallet';
-            connectButton.onclick = () => {
-                window.open('https://phantom.app/', '_blank');
-            };
-        }
-
-        // Function to connect Phantom wallet
-        const connectWallet = async () => {
-            if (isPhantomInstalled()) {
-                try {
-                    const resp = await window.solana.connect();
-                    walletAddress.innerText = `Connected wallet: ${resp.publicKey.toString()}`;
-                } catch (err) {
-                    console.error('Error connecting wallet:', err);
-                }
-            }
-        };
-
-        // Add event listener to connect button
-        connectButton.addEventListener('click', connectWallet);
-    </script>
+    <div id="root"></div>
 </body>
 </html>
