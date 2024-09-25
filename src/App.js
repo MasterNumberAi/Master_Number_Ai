@@ -1,6 +1,5 @@
 import React from 'react';
 import WalletConnection from './wallet';
-import ProjectDetails from './ProjectDetails';
 import './styles.css';
 
 function App() {
@@ -12,12 +11,13 @@ function App() {
                 <h2>Explore our Projects:</h2>
                 <div className="projects">
                     <ul>
-                        <li>Fomo Frog Coin</li>
-                        <li>Master Number Coin</li>
+                        <li><a href="fomo-frog-coin.html">Fomo Frog Coin</a></li>
+                        <li><a href="master-number-coin.html">Master Number Coin</a></li>
                     </ul>
                 </div>
-                <button className="wallet-button">Connect Phantom Wallet</button>
-                <ProjectDetails />
+                <div className="wallet-button">
+                    <button>Connect Phantom Wallet</button>
+                </div>
             </div>
         </WalletConnection>
     );
