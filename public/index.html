@@ -19,21 +19,38 @@
     <p id="walletAddress"></p>
 
     <script>
+        // Function to check if the Phantom wallet is installed
+        const isPhantomInstalled = () => {
+            return window.solana && window.solana.isPhantom;
+        };
+
         const connectButton = document.getElementById('connectWallet');
         const walletAddress = document.getElementById('walletAddress');
 
-        connectButton.addEventListener('click', async () => {
-            if (window.solana && window.solana.isPhantom) {
+        // Check if Phantom wallet is installed
+        if (isPhantomInstalled()) {
+            connectButton.innerText = 'Connect Phantom Wallet';
+        } else {
+            connectButton.innerText = 'Install Phantom Wallet';
+            connectButton.onclick = () => {
+                window.open('https://phantom.app/', '_blank');
+            };
+        }
+
+        // Function to connect Phantom wallet
+        const connectWallet = async () => {
+            if (isPhantomInstalled()) {
                 try {
                     const resp = await window.solana.connect();
                     walletAddress.innerText = `Connected wallet: ${resp.publicKey.toString()}`;
                 } catch (err) {
-                    console.log('Error:', err);
+                    console.error('Error connecting wallet:', err);
                 }
-            } else {
-                alert('Please install the Phantom Wallet extension.');
             }
-        });
+        };
+
+        // Add event listener to connect button
+        connectButton.addEventListener('click', connectWallet);
     </script>
 </body>
 </html>
