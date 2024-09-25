@@ -1,31 +1,43 @@
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
     margin: 0;
     padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
 }
 
 h1 {
     text-align: center;
-    margin-top: 20px;
-    color: #4CAF50;
+    margin-top: 50px;
 }
 
-.project-list {
+.container {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.projects {
     list-style-type: none;
     padding: 0;
 }
 
-.project-list li {
-    background: #fff;
-    margin: 10px;
-    padding: 15px;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+.projects li {
+    margin: 10px 0;
+    font-weight: bold;
 }
 
-.wallet-info {
-    text-align: center;
+.wallet-button {
+    display: inline-block;
     margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.wallet-button:hover {
+    background-color: #0056b3;
 }
